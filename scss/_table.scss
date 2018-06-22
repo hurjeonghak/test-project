@@ -1,0 +1,88 @@
+.tbl-type01 {
+	width: 100%;
+	border-top: 1px solid #bbafa3;
+	caption {
+		font-size: 0;
+	}
+  thead th {
+    padding: 15px 10px;
+		color: #333;
+		font-weight: normal;
+		border-bottom: 1px solid #e6e6e6;
+  }
+	tbody th,
+	tbody td {
+    padding: 15px 10px;
+		border-bottom: 1px solid #e6e6e6;
+	}
+	tbody th {
+		text-align: left;
+		font-weight: normal;
+		color: #000;
+	}
+}
+
+.tbl-type02 {
+	width: 100%;
+	border-top: 1px solid #bea990;
+	caption {
+		font-size: 0;
+	}
+  thead th {
+    padding: 17px 10px;
+		color: #222;
+		font-weight: normal;
+		border-bottom: 1px solid #ddd;
+		span {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1px;
+				height: 16px;
+				background-color: #ddd;
+			}
+		}
+		&:first-child {
+			span::after {
+				display: none;
+			}
+		}
+  }
+	
+	tbody td {
+    padding: 17px 15px;
+		border-bottom: 1px solid #ddd;
+		color: #555;
+		text-align: center;
+		font-family: 'Noto Sans KR';
+		&.ta-l {
+			text-align: left;
+		}
+		a {
+			display: inline-block;
+			padding: 0 25px;
+			max-width: 730px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
+.tbl-no-data {
+	height: 570px;
+	vertical-align: middle;
+	text-align: center;
+	span {
+		display: inline-block;
+		padding-top: 105px;
+		font-size: $fs-medium-xx;
+		color: #888;
+		background: url('/img/com/icon_nodata.png') no-repeat 50% 0;
+	}
+}

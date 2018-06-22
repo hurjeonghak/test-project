@@ -1,0 +1,107 @@
+// Utility Color Classes
+//.success {
+//
+//}
+// Google Color Palette defined: http://www.google.com/design/spec/style/color.html
+$red: ( "base": #F44336,
+"lighten-1": #EF5350,
+"darken-1": #E53935,
+"accent-1": #FF8A80);
+
+$blue: ( "base": #2196F3,
+"lighten-1": #89afd5, // sub title, button
+"darken-1": #29537d, // sub title,
+"darken-2": #222f3f, // sub-nav
+"darken-3": #1e2a45,
+"darken-4" : #192757);
+
+$green: ( "base": #4CAF50);
+
+$yellow: ( "base": #ffeb3b,
+"darken-1": #a89424
+);
+
+$orange: ( "base": #ff9800,
+"darken-1": #c75f05 // sum, passing
+);
+
+$brown: ( "base": #795548,
+"lighten-1": #c09e81 // date, hit
+);
+
+$grey: ( "base": #9e9e9e,
+"lighten-7": #c6c6c6, // family-site arrow 
+"lighten-6": #f6f6f6, // family-site bg
+"lighten-5": #c1c1c1, // family-site border
+"lighten-4": #c0c0c0, // footer-util bar
+"lighten-3": #f3f3f3, // footer-bg
+"lighten-2": #eceeef, // gnb-nav-border
+"lighten-1": #d5d5d5, // gnb-bar-border
+"darken-1": #757575,
+"darken-2": #666666, // content, gnb sub text
+"darken-3": #999999, // address, placeholder
+"darken-4": #333333 // link
+);
+
+$shades: ( "black": #000000,
+"white": #FFFFFF,
+"transparent": transparent);
+
+$colors: ( "red": $red,
+"blue": $blue,
+"green": $green,
+"yellow": $yellow,
+"orange": $orange,
+"brown": $brown,
+"grey": $grey,
+"shades": $shades);
+
+
+// Color Classes
+@each $color_name,
+$color in $colors {
+	@each $color_type,
+	$color_value in $color {
+		@if $color_type=="base" {
+			%#{$color_name} {
+				background-color: $color_value !important;
+			}
+			%#{$color_name}-text {
+				color: $color_value !important;
+			}
+		}
+		@else if $color_name !="shades" {
+			%#{$color_name}%#{$color_type} {
+				background-color: $color_value !important;
+			}
+			%#{$color_name}-text%text-#{$color_type} {
+				color: $color_value !important;
+			}
+		}
+	}
+}
+
+// Shade classes
+@each $color,
+$color_value in $shades {
+	%#{$color} {
+		background-color: $color_value !important;
+	}
+	%#{$color}-text {
+		color: $color_value !important;
+	}
+}
+
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+@function color($color, $type) {
+	@if map-has-key($colors, $color) {
+		$curr_color: map-get($colors, $color);
+		@if map-has-key($curr_color, $type) {
+			@return map-get($curr_color, $type);
+		}
+	}
+	@warn "Unknown `#{name}` in $colors.";
+	@return null;
+}

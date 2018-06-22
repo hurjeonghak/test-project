@@ -1,0 +1,120 @@
+//Default styles
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+
+ul {
+	padding-left: 0;
+	margin: 0;
+	list-style-type: none;
+
+	li {
+		list-style-type: none;
+	}
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	// Gets rid of tap active state
+	// iOS와 안드로이드의 웹킷 기반 브라우저(사파리, 크롬 등)에서 링크를 터치하면 해당 위치를 표시하는 하이라이트
+	-webkit-tap-highlight-color: transparent;
+}
+
+img {
+	vertical-align: top;
+}
+
+
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+}
+
+legend {
+	font-size: 0;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+/*******************
+  Utility Classes
+*******************/
+
+.hide {
+	display: none !important;
+}
+
+.left-align {
+	text-align: left !important;
+}
+
+.right-align {
+	text-align: right !important;
+}
+
+.center,
+.center-align {
+	text-align: center;
+}
+
+.left {
+	float: left !important;
+}
+
+.right {
+	float: right !important;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.valign-wrapper {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+/* public */
+.aria-hidden {
+  overflow: hidden;
+  position: absolute;
+  left: -99999px;
+  width: 1px;
+  height: 1px;
+}
+
+.color-blue {
+  color: #0078dc;
+}
+
+.mt-10 {
+  margin-top: 10px !important;
+}
+
+.fw-400 {
+	font-weight: 400 !important;
+}
+

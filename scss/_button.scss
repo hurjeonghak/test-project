@@ -1,0 +1,94 @@
+.button-wrap {
+  text-align: center;
+}
+
+.button-type-01 {
+  display: inline-block;
+  width: 240px;
+  padding: 15px;
+  background-color: #8d837a;
+  font-size: $fs-large-x;
+  font-weight: 500;
+  color: #fff;
+}
+
+.button-type-02 {
+	display: inline-block;
+	min-width: 120px;
+	text-align: center;
+	color: #fff;
+	&.gray {
+		background-color: #8d837a;
+	}
+	&.darkblue {
+		background-color: #3e4758;
+	}
+	&.blue {
+		background-color: #9caab5;
+	}
+	&.brown {
+		background-color: #b69c7e;
+	}
+	&.mid {
+		line-height: 34px;
+	}
+	&.sml {
+		line-height: 24px;
+		min-width: 70px;
+	}
+}
+
+.button-type-03 {
+	display: inline-block;
+	min-width: 140px;
+	border: 1px solid #c3a68d;
+	text-align: center;
+	line-height: 34px;
+	color: #c3a68d;
+	&.mid {
+		line-height: 34px;
+	}
+	&.sml {
+		line-height: 24px;
+		min-width: 70px;
+	}
+}
+
+.button-type-04 {
+	display: inline-block;
+	width: 220px;
+	line-height: 50px;
+	background-color: #555;
+	color: #fff;
+}
+
+.button-download {
+	position: relative;
+	display: inline-block;
+	padding: 0 50px 0 20px;
+	min-width: 120px;
+	text-align: center;
+	color: #fff;
+	line-height: 34px;
+	background-color: #c9ac89;
+	@include iconAngle( $direction: 'down', $width: 10px, $height: 5px, $thick: 1px, $color: #fff, $top: 50%, $left: 90%);
+}
+
+.button-download-02 {
+	position: relative;
+	display: inline-block;
+	border: 1px solid #c9ac89;
+	width: 68px;
+	height: 68px;
+	padding-top: 41px;
+	text-align: center;
+	color: #c9ac89;
+	font-size: $fs-small-x;
+	@include iconArrow($direction: 'down', $width: 16px, $height: 24px, $thick: 2px, $color: #c9ac89);
+	&::before {
+		top: 18px;
+	}
+	&::after {
+		top: 10px;
+	}
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>로그인</title>
+  <link href="/css/default.css" rel="stylesheet">
+  <link href="/css/notosanskr.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
+</head>
+<body class="">
+
+<div class="ly-body">
+  <div class="container" id="contents">
+    <div class="login-wrap">
+      <h1>로그인</h1>
+      <fieldset>
+        <legend>로그인</legend>
+        <div role="tablist">
+          <button id="tabMember" role="tab" aria-controls="tabpanelMember" aria-selected="true">회원</button>
+          <button id="tabNonMeber" role="tab" aria-controls="tabpanelNonMember" aria-selected="false">비회원(예약확인)</button>
+        </div>
+        <div id="tabpanelMember" role="tabpanel" aria-hidden="false" aria-labelledby="tabMember">
+          <div class="form-div input-id">
+            <label for="memberID">ID</label>
+            <input id="memberID" name type="text" placeholder="ID or HAEVICHI MEMBERSHIP">
+          </div>
+          <div class="form-div input-pw">
+            <label for="memberPassword">PASSWORD</label>
+            <input id="memberPassword" name type="password">
+          </div>
+          <button type="submit">LOGIN</button>
+        </div>
+        <div id="tabpanelNonMember" role="tabpanel" aria-hidden="true" aria-labelledby="tabNonMeber" class="hide">
+          asf
+        </div>
+      </fieldset>
+      <div class="signup-wrap">
+        <a href="#none">SIGNUP NOW</a>
+        <a href="#none">Forget password?</a>
+      </div>
+      <div class="sns-login">
+        <ul>
+          <li><a href="#none">네이버 로그인</a></li>
+          <li><a href="#none">페이스북 로그인</a></li>
+          <li><a href="#none">카카오 로그인</a></li>
+          <li><a href="#none">구글 로그인</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/lib/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="/js/lib/TweenMax.min.js" type="text/javascript"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
+<!--
+	@status:ing
+	@author:허정학
+	@date: 2018.06.18
+-->

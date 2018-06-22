@@ -1,0 +1,32 @@
+/* swiper */
+
+.swiper-container {
+  position: relative;
+
+  .button-prev.icon-arrow {
+    position: absolute;
+    width: 61px;
+    font-weight: 600;
+    text-align: right;
+    text-transform: uppercase;
+    color: #000;
+
+    @include iconArrow($direction: 'left', $width: 12px, $height: 8px, $thick: 1px, $color: #bfbfbf);
+
+  }
+
+  .button-next.icon-arrow {
+    position: absolute;
+    width: 61px;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+    color: #000;
+
+    @include iconArrow($direction: 'right', $width: 12px, $height: 8px, $thick: 1px, $color: #bfbfbf, $top: 50%, $left: 50%);
+  }
+
+  button[class*=button].disabled {
+    color: #7f7f7f;
+  }
+}

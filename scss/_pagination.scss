@@ -1,0 +1,47 @@
+/* 페이징 */
+
+.pagination {
+	margin: 70px 0 0;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.pagination a,
+.pagination strong {
+	display: inline-block;
+	width: 18px;
+	margin: 0 8px;
+	line-height: 22px;
+	vertical-align: middle;
+	color: #888;
+	font-family: 'Noto Sans KR';
+}
+
+.pagination strong {
+	color: #222;
+}
+
+.pagination .edge {
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	font-size: 0;
+}
+
+.pagination .first {
+	background: url('/img/com/icon_pagination.jpg') no-repeat 0 0;
+}
+
+.pagination .last {
+	background: url('/img/com/icon_pagination.jpg') no-repeat -90px 0;
+}
+
+.pagination .prev {
+	margin-right: 10px;
+	background: url('/img/com/icon_pagination.jpg') no-repeat -30px 0;
+}
+
+.pagination .next {
+	margin-left: 10px;
+	background: url('/img/com/icon_pagination.jpg') no-repeat -60px 0;
+}

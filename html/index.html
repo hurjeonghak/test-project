@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		*,
+		ul {
+			margin: 0;
+			padding: 0
+		}
+
+		.codinglist table,
+		table {
+			border-spacing: 0;
+			border-collapse: collapse;
+		}
+
+		body {
+			padding: 15px;
+			font-family: '맑은 고딕', 'Malgun Gothic';
+			font-size: 12px
+		}
+
+		ul {
+			list-style: none
+		}
+
+		strong,
+		table th {
+			font-weight: 400
+		}
+
+		.codinglist {
+			width: 100%
+		}
+
+		.codinglist table {
+			width: 100%;
+			margin: 20px auto;
+			border-top: solid 2px #555;
+			font-size: 13px;
+			text-align: center
+		}
+
+		.codinglist table td,
+		.codinglist table th {
+			padding: 5px 3px;
+			border: 1px solid #ccc;
+			vertical-align: middle
+		}
+
+		.codinglist thead {
+			background-color: #eee
+		}
+
+		.codinglist table tr:hover {
+			background-color: rgba(155, 155, 155, .1)
+		}
+
+		.codinglist table td>a {
+			color: #555
+		}
+
+		.codinglist table th {
+			font-weight: 700
+		}
+
+
+		[data-status='ing'] {
+			background-color: rgba(122, 230, 243, 0.5);
+		}
+
+		[data-status='ing']:hover {
+			background-color: rgba(122, 230, 243, 1) !important;
+		}
+
+		[data-status='complete'] {
+			background-color: rgba(169, 252, 150, 0.5);
+		}
+
+		[data-status='complete']:hover {
+			background-color: rgba(169, 252, 150, 1) !important;
+		}
+		
+		td:nth-child(3), 
+		td:nth-child(4),
+		td:nth-child(5),
+		td:nth-child(6) {padding-left: 10px !important; text-align: left; }
+	</style>
+</head>
+
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="codinglist">
+	<div class="header">
+		<h1></h1>
+	</div>
+	<table>
+		<colgroup>
+			<col style="width:50px;">
+			<col style="width:50px;">
+			<col>
+			<col>
+			<col>
+			<col>
+			<col style="width:70px;">
+			<col style="width:100px;">
+			<!-- <col style="width:80px;"> -->
+		</colgroup>
+		<thead>
+			<tr>
+				<th rowspan="2">Sync</th>
+				<th rowspan="2">No.</th>
+				<th colspan="3">Depth</th>
+				<th rowspan="2">File</th>
+				<th rowspan="2">작성자</th>
+				<th rowspan="2">완료일자</th>
+				<!-- <th rowspan="2">Dev Page</th> -->
+			</tr>
+			<tr>
+				<th>1</th>
+				<th>2 </th>
+				<th>3</th>
+			</tr>
+		</thead>
+		<tbody id="tbody">
+		</tbody>
+	</table>
+</div>
+<script src="/js/cdlist.js"></script>
+</body>
+
+</html>
